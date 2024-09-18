@@ -8,3 +8,8 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 4000); // Change slide every 4 seconds
+
+document.getElementById('navToggle').addEventListener('click', function () {
+    const navbar = document.querySelector('.navbar-nav');
+    navbar.classList.toggle('show-nav');
+});
