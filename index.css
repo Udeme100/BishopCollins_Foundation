@@ -1,0 +1,183 @@
+/* Mobile-first styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the body spans the full width */
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    max-width: 80px;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 0; /* Align hamburger at the top */
+    right: 0; /* Align it to the far right */
+}
+
+.navbar-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.navbar-nav ul li:hover {
+    background-color: #f4f4f4;
+}
+
+.show-nav {
+    display: block;
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Animation for navigation reveal */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* General Section Styling */
+.about-us {
+    padding: 20px;
+    text-align: center;
+    max-width: 100%; /* Full width for mobile */
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Sliding Image Section */
+.slider {
+    position: relative;
+    height: 300px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer .social-links a:hover {
+    color: red;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .navbar-nav {
+        display: block;
+        position: relative;
+        width: auto;
+        top: auto;
+        box-shadow: none;
+    }
+
+    ul.navbar-nav {
+        flex-direction: row;
+    }
+
+    ul.navbar-nav li {
+        border-bottom: none;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .slider {
+        height: 500px;
+    }
+
+    .slide {
+        height: 500px;
+    }
+}
